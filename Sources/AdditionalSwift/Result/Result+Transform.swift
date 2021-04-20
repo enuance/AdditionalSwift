@@ -6,7 +6,7 @@
 //  Copyright © 2021 Stephen L. Martinez. All rights reserved.
 //
 
-internal extension Result {
+public extension Result {
 
     /// Swaps the existing `Success` value with the provided `NewSuccess` value.
     func transform<NewSuccess>(to newSuccess: NewSuccess) -> Result<NewSuccess, Failure> {

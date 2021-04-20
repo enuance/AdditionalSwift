@@ -1,6 +1,4 @@
 //
-//  File.swift
-//
 //  Result+Optional.swift
 //  AdditionalSwift
 //
@@ -8,7 +6,7 @@
 //  Copyright © 2021 Stephen L. Martinez. All rights reserved.
 //
 
-internal extension Result {
+public extension Result {
 
     /// Converts an `Result<T, Error>` into an `Optional<T>`.
     var optional: Success? {

@@ -10,10 +10,10 @@ import Foundation
 
 public enum JSON {
 
-    enum CodingError: Error, CustomStringConvertible {
+    public enum CodingError: Error, CustomStringConvertible {
 
-        typealias DecodingContext = DecodingError.Context
-        typealias EncodingContext = EncodingError.Context
+        public typealias DecodingContext = DecodingError.Context
+        public typealias EncodingContext = EncodingError.Context
 
         case dataCorrupted(DecodingContext)
 
@@ -50,7 +50,7 @@ public enum JSON {
             }
         }
 
-        var description: String {
+        public var description: String {
             switch self {
             case let .dataCorrupted(decodingContext):
                 return """
@@ -92,7 +92,7 @@ public enum JSON {
 
     }
 
-    static func decode<T: Decodable>(
+    public static func decode<T: Decodable>(
         _ type: T.Type,
         fromData data: Data,
         using decoder: JSONDecoder = JSONDecoder()
@@ -107,7 +107,7 @@ public enum JSON {
         }
     }
 
-    static func dataEncode<T: Encodable>(
+    public static func dataEncode<T: Encodable>(
         _ value: T,
         using encoder: JSONEncoder = JSONEncoder()
     ) -> Result<Data, CodingError> {
@@ -121,7 +121,7 @@ public enum JSON {
         }
     }
 
-    static func decode<T: Decodable>(
+    public static func decode<T: Decodable>(
         _ type: T.Type,
         fromString string: String,
         using decoder: JSONDecoder = JSONDecoder()
@@ -132,7 +132,7 @@ public enum JSON {
             .flatMap { decode(T.self, fromData: $0, using: decoder) }
     }
 
-    static func stringEncode<T: Encodable>(
+    public static func stringEncode<T: Encodable>(
         _ value: T,
         using encoder: JSONEncoder = JSONEncoder()
     ) -> Result<String, CodingError> {

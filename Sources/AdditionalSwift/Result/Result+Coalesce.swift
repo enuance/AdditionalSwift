@@ -27,5 +27,18 @@ public extension Result {
             return coalescingAction()
         }
     }
+    
+    // Result Failure Coalescing Operator
+    static func ?? <T, Err: Swift.Error>(
+        _ result: Result<T, Err>,
+        _ defaultValue: @autoclosure () -> T
+        ) -> T {
+        switch result {
+        case let .success(value):
+            return value
+        case .failure:
+            return defaultValue()
+        }
+    }
 
 }
