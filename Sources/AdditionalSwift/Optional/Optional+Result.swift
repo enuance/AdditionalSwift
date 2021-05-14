@@ -27,12 +27,25 @@ public extension Optional {
     ///
     /// - returns: The transformed `Optional<Wrapped>` now as a `Result` type
     ///
-    func result<E: Error>(_ errorIfNil: E) -> Result<Wrapped, E> {
+    func result<E: Swift.Error>(_ errorIfNil: E) -> Result<Wrapped, E> {
         switch self {
         case let .some(value):
             return .success(value)
         case .none:
             return.failure(errorIfNil)
+        }
+    }
+    
+    /// Converts an `Optional` type into a `Result` type.
+    ///
+    /// If the value is `nil` the result will produce a failure of `Optional.Error.noValue`
+    ///
+    var result: Result<Wrapped, Error> {
+        switch self {
+        case let .some(value):
+            return .success(value)
+        case .none:
+            return.failure(.noValue)
         }
     }
 
@@ -58,7 +71,7 @@ public extension Optional {
     ///
     /// - returns: A result type where the `NewSuccess` is an optional version of the tranformed `Wrapped` instance.
     ///
-    func resultFlatMap<E: Error, NewSuccess>(
+    func resultFlatMap<E: Swift.Error, NewSuccess>(
         _ transform: (Wrapped) -> Result<NewSuccess, E>
     ) -> Result<NewSuccess?, E> {
         switch self {

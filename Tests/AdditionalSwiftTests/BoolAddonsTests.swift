@@ -90,4 +90,3 @@ final class BoolAddonsTests: XCTestCase {
         ("test_canCastBooleanOperator", test_canCastBooleanOperator),
     ]
 }
-
