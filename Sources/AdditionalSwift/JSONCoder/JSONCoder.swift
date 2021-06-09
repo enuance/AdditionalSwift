@@ -5,6 +5,8 @@
 //  Created by Stephen Martinez on 4/8/21.
 //  Copyright © 2021 Stephen L. Martinez. All rights reserved.
 //
+//  swiftlint:disable identifier_name
+//
 
 import Foundation
 
@@ -14,13 +16,10 @@ public enum JSON {
         public typealias EncodingContext = EncodingError.Context
 
         case dataCorrupted(DecodingContext)
-
         case keyNotFound(CodingKey, DecodingContext)
         case typeMismatch(Any.Type, DecodingContext)
         case valueNotFound(Any.Type, DecodingContext)
-
         case invalidValue(Any, EncodingContext)
-
         case stringCoding(String)
         case uncategorized(String)
 

@@ -6,7 +6,6 @@
 //  Copyright © 2021 Stephen L. Martinez. All rights reserved.
 //
 
-
 #if canImport(Combine)
 import Combine
 

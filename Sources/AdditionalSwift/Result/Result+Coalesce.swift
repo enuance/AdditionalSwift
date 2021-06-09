@@ -26,7 +26,7 @@ public extension Result {
             return coalescingAction()
         }
     }
-    
+
     // Result Failure Coalescing Operator
     static func ?? <T, Err: Swift.Error>(
         _ result: Result<T, Err>,

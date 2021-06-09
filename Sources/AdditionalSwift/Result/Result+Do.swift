@@ -10,7 +10,7 @@ public extension Result {
     /// Do side-effects in an explicit way
     @discardableResult
     func `do`(
-        onFailure: @escaping (Failure) -> Void = { _ in  },
+        onFailure: @escaping (Failure) -> Void = { _ in },
         onSuccess: @escaping (Success) -> Void
     ) -> Result<Success, Failure> {
         switch self {

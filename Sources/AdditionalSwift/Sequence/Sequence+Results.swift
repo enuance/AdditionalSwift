@@ -18,12 +18,12 @@ public extension Sequence {
             }
         }
     }
-    
+
     func compacted<Success, Failure: Error>(
     ) -> [Success] where Element == Result<Success, Failure> {
         compactMap { try? $0.get() }
     }
-    
+
     func compactMap<NewSuccess, Failure: Error>(
         _ transform: (Element) -> Result<NewSuccess, Failure>
     ) -> [NewSuccess] {

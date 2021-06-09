@@ -5,6 +5,8 @@
 //  Created by Stephen Martinez on 4/8/21.
 //  Copyright © 2021 Stephen L. Martinez. All rights reserved.
 //
+//  swiftlint:disable large_tuple
+//
 
 public extension Result {
     /// Zips two results together where the success is a tuple of the sucesses and failure is the first encountered

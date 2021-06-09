@@ -34,7 +34,7 @@ public extension Optional {
             return.failure(errorIfNil)
         }
     }
-    
+
     /// Converts an `Optional` type into a `Result` type.
     ///
     /// If the value is `nil` the result will produce a failure of `Optional.Error.absentValue`

@@ -12,7 +12,7 @@ public extension Optional {
     ///  There is only one error case that can occur, which is the `absentValue` error.
     ///
     enum Error: Swift.Error { case absentValue }
-    
+
     /// Returns the `Wrapped` value as a throwing expression
     ///
     /// Use this method to retrieve the value of this optional if it represents a some, or to catch the value if it represents a none.

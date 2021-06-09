@@ -7,7 +7,6 @@ disabled_rules:
  - syntactic_sugar
 
 opt_in_rules:
- - array_init
  - attributes
  - closure_end_indentation
  - closure_spacing
@@ -78,10 +77,6 @@ cyclomatic_complexity: 10
 
 file_length: 400
 
-# It is common to use anonomous structures (Tuples) that have 1, 2, or 3
-# members at the most. Three or more members is not commonly seen and is
-# usually a good place to consider making a struct instead in order to provide
-# better readability
 large_tuple:
   warning: 3
   error: 4
@@ -97,11 +92,6 @@ identifier_name:
     - in # in is a valid two character word that is contextually descriptive
     - db # db is a commonly understood abbreviation of database
 
-# Namespaces are a valid usecase for type nesting. The idea is to not let
-# those nested types be exposed to callers from the public API. Nested Types
-# that are intended to be accessed should be type aliased to the top level to
-# enable at most 2 depth access. More access than this would be in danger of
-# breaking the "Law of Demeter".
 nesting:
   type_level: 2
 
