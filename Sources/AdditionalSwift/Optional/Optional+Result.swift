@@ -7,7 +7,6 @@
 //
 
 public extension Optional {
-
     /// Uses a provided Error to convert an `Optional` type into a `Result` type.
     ///
     ///     // A Failure Type to default to if the optional is nil
@@ -81,5 +80,4 @@ public extension Optional {
             return .success(.none)
         }
     }
-
 }

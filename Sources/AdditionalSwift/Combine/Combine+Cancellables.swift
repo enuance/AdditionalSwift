@@ -10,6 +10,6 @@
 import Combine
 
 /// A helpful alias for a set of cancellables.
-@available(OSX 10.15, iOS 10.0, tvOS 13.0, watchOS 6.0, *)
+@available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 public typealias Cancellables = Set<AnyCancellable>
 #endif

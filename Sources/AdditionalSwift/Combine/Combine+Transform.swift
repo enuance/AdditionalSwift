@@ -9,7 +9,7 @@
 #if canImport(Combine)
 import Combine
 
-@available(OSX 10.15, iOS 10.0, tvOS 13.0, watchOS 6.0, *)
+@available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 public extension Combine.Publisher {
 
     /// Ignores the incoming content and inserts the provided `value` for the downstream.

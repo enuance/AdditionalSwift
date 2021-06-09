@@ -97,14 +97,12 @@ public enum JSON {
         fromData data: Data,
         using decoder: JSONDecoder = JSONDecoder()
     ) -> Result<T, CodingError> {
-        do {
-            let decoded = try decoder.decode(type.self, from: data)
-            return .success(decoded)
-        } catch let decodeError as DecodingError {
-            return .failure(.init(decodeError))
-        } catch {
-            return .failure(.uncategorized(error.localizedDescription))
-        }
+        Result { try decoder.decode(type.self, from: data) }
+            .mapError { error in DecodingError?
+                .casted(from: error)
+                .map(CodingError.init)
+                .coalesce(.uncategorized(error.localizedDescription))
+            }
     }
 
     public static func dataEncode<T: Encodable>(
