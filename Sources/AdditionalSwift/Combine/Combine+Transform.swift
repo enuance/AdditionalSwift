@@ -11,7 +11,6 @@ import Combine
 
 @available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 public extension Combine.Publisher {
-
     /// Ignores the incoming content and inserts the provided `value` for the downstream.
     func transform<T>(to value: T) -> Combine.Publishers.Map<Self, T> {
         return map { _ in value }
@@ -21,6 +20,5 @@ public extension Combine.Publisher {
     func transform() -> Combine.Publishers.Map<Self, Void> {
         return transform(to: ())
     }
-
 }
 #endif

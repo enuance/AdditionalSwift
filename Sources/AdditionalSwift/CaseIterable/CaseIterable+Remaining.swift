@@ -7,7 +7,6 @@
 //
 
 public extension CaseIterable where Self: Equatable {
-
     /// A list of the remaining cases including the case this is called on.
     var remainingCases: [Self] {
         Self.allCases
@@ -21,5 +20,4 @@ public extension CaseIterable where Self: Equatable {
             .dropFirst()
             .first
     }
-
 }

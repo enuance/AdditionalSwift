@@ -9,9 +9,7 @@
 import Foundation
 
 public enum JSON {
-
     public enum CodingError: Error, CustomStringConvertible {
-
         public typealias DecodingContext = DecodingError.Context
         public typealias EncodingContext = EncodingError.Context
 
@@ -138,5 +136,4 @@ public enum JSON {
             .map { String(data: $0, encoding: .utf8) }
             .flatMap { $0.result(.stringCoding("Failure to produce UTF8 String from data")) }
     }
-
 }

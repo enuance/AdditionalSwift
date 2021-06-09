@@ -7,7 +7,6 @@
 //
 
 public extension Result {
-
     /// Zips two results together where the success is a tuple of the sucesses and failure is the first encountered
     func zip<S2>(_ secondResult: Result<S2, Failure>) -> Result<(Success, S2), Failure> {
         flatMap { first in secondResult.map { second in (first, second) } }
@@ -20,7 +19,8 @@ public extension Result {
     ) -> Result<(Success, S2, S3), Failure> {
         flatMap { first in secondResult
             .zip(thirdResult)
-            .map { (first, $0, $1) } }
+            .map { (first, $0, $1) }
+        }
     }
 
     /// Zips four results together where the success is a tuple of the sucesses and failure is the first encountered
@@ -31,7 +31,8 @@ public extension Result {
     ) -> Result<(Success, S2, S3, S4), Failure> {
         flatMap { first in secondResult
             .zip(thirdResult, fourthResult)
-            .map { (first, $0, $1, $2) } }
+            .map { (first, $0, $1, $2) }
+        }
     }
 
     /// Zips five results together where the success is a tuple of the sucesses and failure is the first encountered
@@ -43,7 +44,8 @@ public extension Result {
     ) -> Result<(Success, S2, S3, S4, S5), Failure> {
         flatMap { first in secondResult
             .zip(thirdResult, fourthResult, fifthResult)
-            .map { (first, $0, $1, $2, $3) } }
+            .map { (first, $0, $1, $2, $3) }
+        }
     }
 
     /// Zips six results together where the success is a tuple of the sucesses and failure is the first encountered
@@ -56,7 +58,7 @@ public extension Result {
     ) -> Result<(Success, S2, S3, S4, S5, S6), Failure> {
         flatMap { first in secondResult
             .zip(thirdResult, fourthResult, fifthResult, sixthResult)
-            .map { (first, $0, $1, $2, $3, $4) } }
+            .map { (first, $0, $1, $2, $3, $4) }
+        }
     }
-
 }

@@ -28,11 +28,9 @@ public struct Signal: Hashable { }
 /// where).
 @available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 public extension Combine.Publisher {
-
     /// Ignores the incoming content and inserts `Signal` for the downstream.
     func transformSignal() -> Combine.Publishers.Map<Self, Signal> {
         return transform(to: Signal())
     }
-
 }
 #endif

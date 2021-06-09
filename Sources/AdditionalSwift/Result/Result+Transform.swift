@@ -7,7 +7,6 @@
 //
 
 public extension Result {
-
     /// Swaps the existing `Success` value with the provided `NewSuccess` value.
     func transform<NewSuccess>(to newSuccess: NewSuccess) -> Result<NewSuccess, Failure> {
         switch self {
@@ -27,6 +26,5 @@ public extension Result {
             return .failure(error)
         }
     }
-
 }
 

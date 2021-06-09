@@ -7,7 +7,6 @@
 //
 
 public extension Result {
-
     /// Uses a default value to extract the Success value. The default will be provided if it was a failure to begin with.
     func coalesce(_ defaultValue: Success) -> Success {
         switch self {
@@ -40,5 +39,4 @@ public extension Result {
             return defaultValue()
         }
     }
-
 }

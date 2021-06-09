@@ -7,9 +7,7 @@
 //
 
 public extension Optional {
-    
     static func casted<T>(from value: T) -> Self {
         value as? Wrapped
     }
-    
 }

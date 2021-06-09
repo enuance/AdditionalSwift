@@ -37,14 +37,14 @@ public extension Optional {
     
     /// Converts an `Optional` type into a `Result` type.
     ///
-    /// If the value is `nil` the result will produce a failure of `Optional.Error.noValue`
+    /// If the value is `nil` the result will produce a failure of `Optional.Error.absentValue`
     ///
     var result: Result<Wrapped, Error> {
         switch self {
         case let .some(value):
             return .success(value)
         case .none:
-            return.failure(.noValue)
+            return.failure(.absentValue)
         }
     }
 

@@ -7,7 +7,6 @@
 //
 
 public extension Result {
-    
     /// Boolean representation
     var isSuccessful: Bool {
         switch self {
@@ -17,5 +16,4 @@ public extension Result {
             return false
         }
     }
-    
 }

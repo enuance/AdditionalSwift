@@ -1,0 +1,132 @@
+disabled_rules:
+ - trailing_comma
+ - discarded_notification_center_observer
+ - notification_center_detachment
+ - orphaned_doc_comment
+ - unused_capture_list
+ - syntactic_sugar
+
+opt_in_rules:
+ - array_init
+ - attributes
+ - closure_end_indentation
+ - closure_spacing
+ - collection_alignment
+ - convenience_type
+ - discouraged_object_literal
+ - empty_collection_literal
+ - empty_count
+ - empty_string
+ - enum_case_associated_values_count
+ - fatal_error_message
+ - first_where
+ - force_unwrapping
+ - implicitly_unwrapped_optional
+ - indentation_width
+ - last_where
+ - legacy_random
+ - literal_expression_end_indentation
+ - multiline_arguments
+ - multiline_function_chains
+ - multiline_literal_brackets
+ - multiline_parameters
+ - multiline_parameters_brackets
+ - operator_usage_whitespace
+ - overridden_super_call
+ - pattern_matching_keywords
+ - prefer_self_type_over_type_of_self
+ - redundant_nil_coalescing
+ - redundant_type_annotation
+ - strict_fileprivate
+ - toggle_bool
+ - unneeded_parentheses_in_closure_argument
+ - unused_import
+ - vertical_whitespace_closing_braces
+ - vertical_whitespace_opening_braces
+ - yoda_condition
+
+excluded: # paths to exclude during linting.
+ - Package.swift
+
+# adjust parameters in the following rules:
+empty_count:
+  severity: warning
+
+force_try:
+  severity: warning
+
+force_cast:
+  severity: warning
+
+shorthand_operator:
+  severity: warning
+
+# specifying a single value for a rule that takes both warning and error
+# thresholds converts it to warning only:
+line_length:
+  warning: 120
+  ignores_comments: true
+  ignores_urls: true
+
+function_parameter_count: 5
+
+function_body_length: 60
+
+type_body_length: 200
+
+cyclomatic_complexity: 10
+
+file_length: 400
+
+# It is common to use anonomous structures (Tuples) that have 1, 2, or 3
+# members at the most. Three or more members is not commonly seen and is
+# usually a good place to consider making a struct instead in order to provide
+# better readability
+large_tuple:
+  warning: 3
+  error: 4
+
+identifier_name:
+  min_length: 3
+  max_length: 40
+  allowed_symbols: ["_"] #if not allowed, will produce error not warning
+  validates_start_with_lowercase: false #if true will produce error not warning
+  excluded:
+    - id # id is _required_ to conform to the Identifiable protocol
+    - to # to is a valid two character word that is contextually descriptive
+    - in # in is a valid two character word that is contextually descriptive
+    - db # db is a commonly understood abbreviation of database
+
+# Namespaces are a valid usecase for type nesting. The idea is to not let
+# those nested types be exposed to callers from the public API. Nested Types
+# that are intended to be accessed should be type aliased to the top level to
+# enable at most 2 depth access. More access than this would be in danger of
+# breaking the "Law of Demeter".
+nesting:
+  type_level: 2
+
+multiline_arguments:
+  first_argument_location: next_line
+  only_enforce_after_first_closure_on_first_line: true
+
+private_over_fileprivate:
+  validate_extensions: true
+
+trailing_whitespace:
+  ignores_empty_lines: false
+  ignores_comments: true
+
+# Custom Rules Section
+custom_rules:
+  case_binding_position:
+    name: "Case Binding Position"
+    regex: 'case \.[\h\S]*\([\h\S]*\blet\b[\h\S]*\)'
+    message: "The let should be positioned just after the case keyword, not in the parenthesis."
+    severity: warning
+
+  array_constructor:
+    name: "Array/Dictionary initializer"
+    regex: '[let,var] .+ = (\[.+\]\(\))'
+    capture_group: 1
+    message: "Use explicit type annotation when initializing empty arrays and dictionaries"
+    severity: warning

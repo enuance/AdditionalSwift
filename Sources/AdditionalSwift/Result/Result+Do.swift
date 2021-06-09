@@ -7,7 +7,6 @@
 //
 
 public extension Result {
-    
     /// Do side-effects in an explicit way
     @discardableResult
     func `do`(
@@ -23,5 +22,4 @@ public extension Result {
             return .failure(error)
         }
     }
-    
 }

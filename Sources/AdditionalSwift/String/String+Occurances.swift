@@ -9,9 +9,7 @@
 import Foundation
 
 public extension String {
-    
     static func occurances(ofRegex regex: String, `in` string: String) -> [String] {
-        
         #if DEBUG
         let isValid = (try? NSRegularExpression(pattern: regex, options: [])) != nil
         assert(isValid, "Invalid Regex Pattern: \(regex)")
@@ -43,5 +41,4 @@ public extension String {
     func occurances(ofRegex pattern: String) -> [String] {
         Self.occurances(ofRegex: pattern, in: self)
     }
-    
 }

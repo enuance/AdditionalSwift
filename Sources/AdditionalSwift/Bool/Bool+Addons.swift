@@ -7,7 +7,6 @@
 //
 
 public extension Bool {
-
     /// Provides the inverse value of the boolean expression. This is the functional equivilent of the preceding `!` operator.
     static func not(_ booleanExp: @autoclosure () -> Bool) -> Bool {
         !booleanExp()
@@ -22,5 +21,4 @@ public extension Bool {
             .map { _ in true }
             .coalesce(false)
     }
-
 }

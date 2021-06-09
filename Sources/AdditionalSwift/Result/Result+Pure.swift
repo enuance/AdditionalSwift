@@ -7,7 +7,6 @@
 //
 
 public extension Result {
-    
     /// Type lifting when Compiler inference is available
     static func pure(_ value: Success) -> Result<Success, Failure> {
         return .success(value)
@@ -17,5 +16,4 @@ public extension Result {
     static func pure(failedBy: Failure.Type, _ value: Success) -> Result<Success, Failure> {
         return .success(value)
     }
-    
 }

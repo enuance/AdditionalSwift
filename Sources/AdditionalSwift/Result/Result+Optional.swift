@@ -7,7 +7,6 @@
 //
 
 public extension Result {
-
     /// Converts an `Result<T, Error>` into an `Optional<T>`.
     var optional: Success? {
         switch self {
@@ -17,6 +16,5 @@ public extension Result {
             return nil
         }
     }
-
 }
 

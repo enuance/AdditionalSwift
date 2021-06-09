@@ -7,14 +7,11 @@
 //
 
 public extension Optional {
-    
     /// The `Optional` error used when handling the `none` case in a throwing fashion.
     ///
-    ///  There is only one error case that can occur, which is the `noValue` error.
+    ///  There is only one error case that can occur, which is the `absentValue` error.
     ///
-    enum Error: Swift.Error {
-        case noValue
-    }
+    enum Error: Swift.Error { case absentValue }
     
     /// Returns the `Wrapped` value as a throwing expression
     ///
@@ -27,8 +24,7 @@ public extension Optional {
         case let .some(value):
             return value
         case .none:
-            throw Error.noValue
+            throw Error.absentValue
         }
     }
-    
 }

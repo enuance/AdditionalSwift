@@ -7,7 +7,6 @@
 //
 
 public extension Optional {
-    
     /// A non-infix version of the coalescing operator `??` for use in transform chains.
     ///
     /// - parameters:
@@ -41,5 +40,4 @@ public extension Optional {
             return coalescingAction()
         }
     }
-    
 }
