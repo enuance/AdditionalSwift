@@ -19,7 +19,9 @@ import Combine
 /// - warning: This is intended to be an uninhabited type. You can add transforms but **do not add properties** to it.
 ///
 @available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
-public struct Signal: Hashable { }
+public struct Signal: Hashable {
+    public init() { }
+}
 
 /// These extensions are inspired by operators found and used extensively in SwiftNIO, a high performance non-blocking IO framework
 /// used in server-side development. They are essentially used to inject content of your own choosing while ignoring the incoming

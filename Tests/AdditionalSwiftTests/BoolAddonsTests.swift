@@ -11,15 +11,18 @@ import XCTest
 
 final class BoolAddonsTests: XCTestCase {
     func test_notBooleanOperator() {
+        // Arrange
         let inputOne = true
         let inputTwo = false
 
         let expOutputOne = false
         let expOutputTwo = true
 
+        // Act
         let outputOne: Bool = .not(inputOne)
         let outputTwo: Bool = .not(inputTwo)
 
+        // Assert
         XCTAssertEqual(
             outputOne,
             expOutputOne,
@@ -34,15 +37,18 @@ final class BoolAddonsTests: XCTestCase {
     }
 
     func test_isFalseBooleanProperty() {
+        // Arrange
         let inputOne = true
         let inputTwo = false
 
         let expOutputOne = false
         let expOutputTwo = true
 
+        // Act
         let outputOne = inputOne.isFalse
         let outputTwo = inputTwo.isFalse
 
+        // Assert
         XCTAssertEqual(
             outputOne,
             expOutputOne,
@@ -57,13 +63,16 @@ final class BoolAddonsTests: XCTestCase {
     }
 
     func test_canCastBooleanOperator() {
+        // Arrange
         let aStringInput = "A String"
         let stringDecodable: Decodable = aStringInput
 
+        // Act
         let outputOne: Bool = .canCast(aStringInput, to: Int.self)
         let outputTwo: Bool = .canCast(stringDecodable, to: String.self)
         let outputThree: Bool = .canCast(stringDecodable, to: Int.self)
 
+        // Assert
         XCTAssertEqual(
             outputOne,
             false,
