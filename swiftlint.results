@@ -1,4 +1,5 @@
 SwiftLint Results 06/08/2021
 Responsible Party enuance
 
-No SwiftLint Warnings
+/Users/enuance/Desktop/AdditionalSwift/Sources/AdditionalSwift/XCTest/XCTest+Addons.swift:9:4: warning: Todo Violation: TODOs should be resolved (xctest-dynamic-overlay from po...). (todo)
+/Users/enuance/Desktop/AdditionalSwift/Sources/AdditionalSwift/XCTest/XCTest+Result.swift:9:4: warning: Todo Violation: TODOs should be resolved (xctest-dynamic-overlay from po...). (todo)
