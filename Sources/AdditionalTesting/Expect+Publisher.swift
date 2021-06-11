@@ -49,10 +49,11 @@ public extension Publisher {
                 }
             },
             receiveValue: { value in
-                let shouldFulfill = collected.count == limit && limit != 0
                 let shouldAppend = collected.count < limit || limit == 0
-                if shouldFulfill { expectation.fulfill() }
                 if shouldAppend { collected.append(value) }
+                
+                let shouldFulfill = collected.count == limit && limit != 0
+                if shouldFulfill { expectation.fulfill() }
             }
         )
         .store(in: &cancellables)
