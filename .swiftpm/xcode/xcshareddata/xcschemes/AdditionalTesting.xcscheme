@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1250"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "#!/bin/zsh&#10;# Created by Stephen Martinez&#10;# Copyright 2021 Stephen L. Martinez&#10;# My Support for Swiftlint in Packages&#10;&#10;#Environment Setup&#10;&#10;# Update the path for Homebrew installed items&#10;PATH=&quot;${PATH}:/usr/local/bin&quot;&#10;export PATH&#10;&#10;# Variables&#10;&#10;# - Locate the SPM Root Directory&#10;PACKAGE_DIR=$WORKSPACE_PATH/../../..&#10;&#10;# - Get the script run date&#10;RUN_DATE=$(date +&apos;%m/%d/%Y&apos;)&#10;&#10;# Actions&#10;&#10;# - Go to the Package Directory&#10;cd $PACKAGE_DIR&#10;&#10;# - Write out the header&#10;echo &quot;SwiftLint Results ${RUN_DATE}&quot; &gt; swiftlint.results&#10;echo &quot;Responsible Party ${USER}\n&quot; &gt;&gt; swiftlint.results&#10;&#10;# - Write out the Swiftlint contents&#10;if which swiftlint &gt;/dev/null; then&#10;  SWIFTLINT_CONTENT=$(swiftlint)&#10;  if test -z &quot;$SWIFTLINT_CONTENT&quot;; then&#10;    echo &quot;No SwiftLint Warnings&quot; &gt;&gt; swiftlint.results&#10;  else&#10;    echo $SWIFTLINT_CONTENT &gt;&gt; swiftlint.results&#10;  fi&#10;else&#10;  echo &quot;Error: Swiftlint is not installed&quot; &gt;&gt; swiftlint.results&#10;  echo &quot;Download from https://github.com/realm/SwiftLint&quot; &gt;&gt; swiftlint.results&#10;  echo &quot;If it is installed, you may need to update your path&quot; &gt;&gt; swiftlint.results&#10;  exit 1  &#10;fi&#10;exit 0&#10;"
+               shellToInvoke = "/bin/zsh">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "AdditionalTesting"
+                     BuildableName = "AdditionalTesting"
+                     BlueprintName = "AdditionalTesting"
+                     ReferencedContainer = "container:">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AdditionalTesting"
+               BuildableName = "AdditionalTesting"
+               BlueprintName = "AdditionalTesting"
+               ReferencedContainer = "container:">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AdditionalTesting"
+            BuildableName = "AdditionalTesting"
+            BlueprintName = "AdditionalTesting"
+            ReferencedContainer = "container:">
+         </BuildableReference>
+      </MacroExpansion>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

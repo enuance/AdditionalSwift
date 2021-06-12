@@ -16,7 +16,7 @@ public extension Expect {
         from urlString: String,
         _ file: StaticString = #file,
         _ line: UInt = #line
-    ) throws ->  URL {
+    ) throws -> URL {
         guard let url = URL(string: urlString) else {
             XCTFail("Expect.url failed", file: file, line: line)
             throw Error(info: #"Could not build URL from ("\#(urlString)")"#)
@@ -38,13 +38,13 @@ public extension Expect {
             httpVersion: httpVersion,
             headerFields: headerFields
         )
-        
+
         guard let response = httpResponse else {
             XCTFail("Expect.httpResponse failed", file: file, line: line)
             let info = "Couldn't build HTTPURLResponse from provided parameters"
             throw Error(info: info)
         }
-        
+
         return response
     }
 }

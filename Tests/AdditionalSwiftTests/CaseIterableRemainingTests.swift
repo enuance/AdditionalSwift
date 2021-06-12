@@ -12,7 +12,6 @@ import AdditionalTesting
 
 @testable import AdditionalSwift
 
-
 final class CaseIterableRemainingTests: XCTestCase {
     enum IterableEnum: String, CaseIterable, Equatable {
         case one

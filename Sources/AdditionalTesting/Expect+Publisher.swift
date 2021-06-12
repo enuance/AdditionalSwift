@@ -51,7 +51,7 @@ public extension Publisher {
             receiveValue: { value in
                 let shouldAppend = collected.count < limit || limit == 0
                 if shouldAppend { collected.append(value) }
-                
+
                 let shouldFulfill = collected.count == limit && limit != 0
                 if shouldFulfill { expectation.fulfill() }
             }
@@ -59,9 +59,9 @@ public extension Publisher {
         .store(in: &cancellables)
 
         testTasks()
-        
+
         let waiter = XCTWaiter()
-        
+
         if waiter.wait(for: [expectation], timeout: timeout) == .timedOut {
             XCTFail("expectRecord failed: timedOut", file: file, line: line)
         }

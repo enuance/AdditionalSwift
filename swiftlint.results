@@ -1,31 +1,4 @@
-SwiftLint Results 06/10/2021
+SwiftLint Results 06/12/2021
 Responsible Party enuance
 
-/Users/enuance/Desktop/AdditionalSwift/Tests/AdditionalSwiftTests/BoolAddonsTests.swift:24: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Sources/AdditionalTesting/Expect+Networking.swift:41: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Sources/AdditionalTesting/Expect+Networking.swift:47: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Sources/AdditionalTesting/Expect+Networking.swift:19:13: warning: Operator Usage Whitespace Violation: Operators should be surrounded by a single whitespace when they are being used. (operator_usage_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Sources/AdditionalTesting/Expect+Publisher.swift:64: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Sources/AdditionalTesting/Expect+Publisher.swift:66: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Sources/AdditionalTesting/Expect+Assertions.swift:22: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Sources/AdditionalTesting/Expect+Assertions.swift:31: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Sources/AdditionalTesting/Expect+Assertions.swift:34: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Sources/AdditionalTesting/Expect+Assertions.swift:42: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Sources/AdditionalTesting/Expect+Assertions.swift:51: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Sources/AdditionalTesting/Expect+Assertions.swift:54: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Sources/AdditionalTesting/Expect+Assertions.swift:65: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Sources/AdditionalTesting/Expect+Assertions.swift:76: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Sources/AdditionalTesting/Expect+Assertions.swift:79: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Sources/AdditionalTesting/Expect+Assertions.swift:86: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Sources/AdditionalTesting/Expect+Assertions.swift:87: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Sources/AdditionalTesting/Expect+Assertions.swift:87: warning: Vertical Whitespace Violation: Limit vertical whitespace to a single empty line. Currently 2. (vertical_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Sources/AdditionalTesting/Expect+Assertions.swift:90: warning: Vertical Whitespace Violation: Limit vertical whitespace to a single empty line. Currently 2. (vertical_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Tests/AdditionalSwiftTests/CaseIterableRemainingTests.swift:104: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Tests/AdditionalSwiftTests/CaseIterableRemainingTests.swift:107: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Tests/AdditionalSwiftTests/CaseIterableRemainingTests.swift:112: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Tests/AdditionalSwiftTests/CaseIterableRemainingTests.swift:117: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Tests/AdditionalSwiftTests/CaseIterableRemainingTests.swift:122: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Tests/AdditionalSwiftTests/CaseIterableRemainingTests.swift:126: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Tests/AdditionalSwiftTests/CaseIterableRemainingTests.swift:128: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Tests/AdditionalSwiftTests/CaseIterableRemainingTests.swift:130: warning: Trailing Whitespace Violation: Lines should not have trailing whitespace. (trailing_whitespace)
-/Users/enuance/Desktop/AdditionalSwift/Tests/AdditionalSwiftTests/CaseIterableRemainingTests.swift:15: warning: Vertical Whitespace Violation: Limit vertical whitespace to a single empty line. Currently 2. (vertical_whitespace)
+No SwiftLint Warnings

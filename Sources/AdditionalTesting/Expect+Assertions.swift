@@ -19,7 +19,7 @@ public extension Expect {
         _ line: UInt = #line
     ) {
         let shouldFail = bool() != true
-        
+
         func composeMessage() -> String {
             let userMessage = message()
             let initialMessage = "Expect.true failed"
@@ -28,10 +28,10 @@ public extension Expect {
                 ? initialMessage.appending(" - " + userMessage)
                 : initialMessage
         }
-        
+
         if shouldFail { XCTFail(composeMessage(), file: file, line: line) }
     }
-    
+
     static func `false`(
         _ bool: @autoclosure () -> Bool,
         _ message: @autoclosure () -> String = "",
@@ -39,7 +39,7 @@ public extension Expect {
         _ line: UInt = #line
     ) {
         let shouldFail = bool() != false
-        
+
         func composeMessage() -> String {
             let userMessage = message()
             let initialMessage = "Expect.false failed"
@@ -48,10 +48,10 @@ public extension Expect {
                 ? initialMessage.appending(" - " + userMessage)
                 : initialMessage
         }
-        
+
         if shouldFail { XCTFail(composeMessage(), file: file, line: line) }
     }
-    
+
     static func equal<T: Equatable>(
         _ firstExpression: @autoclosure () -> T,
         _ secondExpression: @autoclosure () -> T,
@@ -62,7 +62,7 @@ public extension Expect {
         let firstValue = firstExpression()
         let secondValue = secondExpression()
         let shouldFail = firstValue != secondValue
-        
+
         func composeMessage() -> String {
             let first = String(describing: firstValue)
             let second = String(describing: secondValue)
@@ -73,20 +73,18 @@ public extension Expect {
                 ? initialMessage.appending(" - " + userMessage)
                 : initialMessage
         }
-        
+
         if shouldFail { XCTFail(composeMessage(), file: file, line: line) }
     }
-    
+
 //    static func `continue`<C: Collection>(
 //        when collection: C,
 //        reaches count: Int
 //    ) {
 //        let semaphore = DispatchSemaphore(value: 0)
 //    }
-    
-    
-}
 
+}
 
 //    static func fulfill<C: Collection>(
 //        _ expectation: XCTestExpectation,

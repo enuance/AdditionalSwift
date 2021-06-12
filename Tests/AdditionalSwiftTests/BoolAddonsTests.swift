@@ -21,7 +21,7 @@ final class BoolAddonsTests: XCTestCase {
         // Act
         let outputOne: Bool = .not(inputOne)
         let outputTwo: Bool = .not(inputTwo)
-        
+
         // Assert
         XCTAssertEqual(
             outputOne,
