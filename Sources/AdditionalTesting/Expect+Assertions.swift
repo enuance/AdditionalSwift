@@ -77,22 +77,6 @@ public extension Expect {
         if shouldFail { XCTFail(composeMessage(), file: file, line: line) }
     }
 
-//    static func `continue`<C: Collection>(
-//        when collection: C,
-//        reaches count: Int
-//    ) {
-//        let semaphore = DispatchSemaphore(value: 0)
-//    }
-
 }
-
-//    static func fulfill<C: Collection>(
-//        _ expectation: XCTestExpectation,
-//        when outputs: C,
-//        reaches count: Int
-//    ) {
-//        guard outputs.count == count else { return }
-//        expectation.fulfill()
-//    }
 
 #endif
