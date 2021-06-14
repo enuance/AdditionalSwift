@@ -7,6 +7,7 @@
 //
 
 import XCTest
+
 @testable import AdditionalSwift
 
 final class BoolAddonsTests: XCTestCase {

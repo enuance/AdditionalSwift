@@ -45,7 +45,7 @@ public extension Result {
     func expectFailure(
         _ file: StaticString = #file,
         _ line: UInt = #line
-    ) -> Result<Success, Failure> where Failure: Equatable {
+    ) -> Result<Success, Failure> {
         switch self {
         case .success:
             XCTFail("Result Should Have Failed", file: file, line: line)
