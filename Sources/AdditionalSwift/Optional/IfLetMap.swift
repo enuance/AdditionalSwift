@@ -41,7 +41,7 @@ public extension IfLetMap {
             self.map = map
         }
 
-        public func `else`(_ transform: @escaping (Element) ->  U) -> V  {
+        public func `else`(_ transform: @escaping (Element) -> U) -> V {
             optional()
                 .map { value in map { letTransform($0, value) } }
                 .coalesce(map(transform))
