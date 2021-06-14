@@ -25,8 +25,7 @@ public struct Signal: Hashable {
 
 /// These extensions are inspired by operators found and used extensively in SwiftNIO, a high performance non-blocking IO framework
 /// used in server-side development. They are essentially used to inject content of your own choosing while ignoring the incoming
-/// content provided upstream. The naming `transform` was chosen to be consistent with prior-art (this is how it is named else
-/// where).
+/// content provided upstream. The naming `transform` was chosen to be consistent with prior-art.
 @available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 public extension Combine.Publisher {
     /// Ignores the incoming content and inserts `Signal` for the downstream.
