@@ -106,14 +106,12 @@ public enum JSON {
         _ value: T,
         using encoder: JSONEncoder = JSONEncoder()
     ) -> Result<Data, CodingError> {
-        do {
-            let serialized = try encoder.encode(value)
-            return .success(serialized)
-        } catch let encodeError as EncodingError {
-            return .failure(.init(encodeError))
-        } catch {
-            return .failure(.uncategorized(error.localizedDescription))
-        }
+        Result { try encoder.encode(value) }
+            .mapError { error in EncodingError?
+                .casted(from: error)
+                .map(CodingError.init)
+                .coalesce(.uncategorized(error.localizedDescription))
+            }
     }
 
     public static func decode<T: Decodable>(
