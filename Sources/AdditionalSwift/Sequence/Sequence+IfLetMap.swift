@@ -7,9 +7,9 @@
 //
 
 extension Sequence {
-    func ifLetMap<T, U>(
-        _ optional: @escaping @autoclosure () -> T?
-    ) -> IfLetMap<Element, T, U, [U]> {
+    func ifLetMap<Wrapped, T>(
+        _ optional: @escaping @autoclosure () -> Wrapped?
+    ) -> IfLetMap<Element, Wrapped, T, [T]> {
         IfLetMap(optional) { map($0) }
     }
 }
